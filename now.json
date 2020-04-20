@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "env": {
+    "NODE_ENV": "dev",
+    "NODE_PORT": "3010",
+    "MYSQL_HOST": "192.168.18.21",
+    "MYSQL_USER": "david",
+    "MYSQL_PASS": "F62856far1981*",
+    "MYSQL_DB": "redsocial",
+    "SENTRY_DNS": "1050e57a12304ba1a647c30791881c87",
+    "SENTRY_ID": "5196480"
+  },
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
+    }
+  ]
+}
